@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="eventcss.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">藤沢市民ポータル</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ログイン</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  市民ポータルに登録
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <div id="navigation" style="display:block;" class="p-3">
+        <div id ="food" class="pt-5">
+            <div class="card">
+                <img class="card_width" src="no173.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">飲食物の販売・調理</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="food1" checked>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                    あり
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="food2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                    なし
+                    </label>
+                </div>
+                <button type="button" class="btn btn-outline-primary" id="1" onclick="next('fire')">次へ</button>
+                </div>
+            </div>
+        </div>
+
+        <div id ="fire" style="display: none;" class="pt-5">
+            <div class="card">
+                <div style="text-align: center;">
+                <img class="card_width" src="no193.png" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">炭火や焚火や火器の利用</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault2" id="fire1" checked>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                    あり
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault2" id="fire2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                    なし
+                    </label>
+                
+                </div>
+                <button type="button" class="btn btn-outline-primary" id="2" onclick="next('place')">次へ</button>      
+            </div>
+                
+            </div>
+        </div>
+
+        <div id ="place" style="display: none;" class="pt-5">
+            <div class="card">
+                <div style="text-align: center;">
+                <img class="card_width" src="no43.png" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">開催場所</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="place1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        藤沢市道
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault4" id="place2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                        藤沢市内公園
+                        </label>
+                    </div>
+                    <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault4" id="place3">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                            公共施設
+                            </label> 
+                    </div> 
+                    <button type="button" class="btn btn-outline-primary" id="2" onclick="next('cheer')">次へ</button>                
+                    </div>                    
+                </div>
+            </div>
+
+        <div id ="cheer" style="display: none;" class="pt-5">
+            <div class="card">
+                <div style="text-align: center;">
+                <img class="card_width" src="no41.png" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">藤沢市の後援が必要ですか？</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault3" id="cheer1" checked>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                    はい
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault3" id="cheer2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                    いいえ
+                    </label>
+                </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="4" onclick="procVisible()">必要な手続きを確認する</button>
+            </div>
+        </div>
+    </div>
+    <script src="event.js"></script>
+</body>
+</html>
